@@ -7,4 +7,4 @@ LINK_LEN = 6
 STRING_FOR_LINK = string.ascii_letters + string.digits
 
 # Шаблон для проверки короткой ссылки
-MATCH_SHORT_LINK = '^$|^[a-zA-Z0-9]*$'
+MATCH_SHORT_LINK = "^$|^[a-zA-Z0-9]*$"

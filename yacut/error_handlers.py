@@ -25,13 +25,13 @@ class InvalidAPIUsage(Exception):
 @app.errorhandler(404)
 def page_not_found(error):
     url = request.url
-    return render_template('404.html', url=url), HTTPStatus.NOT_FOUND
+    return render_template("404.html", url=url), HTTPStatus.NOT_FOUND
 
 
 @app.errorhandler(500)
 def internal_error(error):
     url = request.url
-    return render_template('500.html', url=url), HTTPStatus.INTERNAL_SERVER_ERROR
+    return render_template("500.html", url=url), HTTPStatus.INTERNAL_SERVER_ERROR
 
 
 @app.errorhandler(InvalidAPIUsage)

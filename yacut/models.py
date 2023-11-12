@@ -18,13 +18,12 @@ class URLMap(db.Model):
     def to_dict(self):
         return dict(
             url=self.original,
-            short_link=url_for(
-                'link_view', short=self.short, _external=True)
+            short_link=url_for("link_view", short=self.short, _external=True),
         )
 
     # метод для автоформирования короткого имени
     def get_unique_short_id(self):
-        auto_link = ''.join(choice(STRING_FOR_LINK) for _ in range(LINK_LEN))
+        auto_link = "".join(choice(STRING_FOR_LINK) for _ in range(LINK_LEN))
         return auto_link
 
     # метод проверки предоставленного короткого имени
